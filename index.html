@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FabMenu — Official Home</title>
+    
+    <!-- DISCORD EMBED PREVIEW META TAGS -->
+    <meta property="og:title" content="FabMenu — Official Home">
+    <meta property="og:description" content="A lightweight, intuitive modification tool for Among Us.">
+    <meta property="og:image" content="https://github.com/fabmenu/fabmenu.github.io/blob/main/Img/Banner.jpg?raw=true">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Google Fonts for a clean, modern look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +47,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            scroll-behavior: smooth; /* Enables smooth scrolling when clicking the top menu buttons */
+            scroll-behavior: smooth;
         }
 
         /* Maximized container width for the ultimate desktop viewing experience */
@@ -52,18 +60,6 @@
         header {
             text-align: center;
             margin-bottom: 45px;
-        }
-
-        /* Responsive Banner Styling */
-        .hero-banner {
-            width: 100%;
-            max-width: 1100px;
-            height: auto;
-            border-radius: 16px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--panel-border);
-            display: block;
         }
 
         .logo {
@@ -372,10 +368,6 @@
             .btn {
                 width: 100%;
             }
-            .hero-banner {
-                margin-bottom: 20px;
-                border-radius: 10px;
-            }
         }
 
         @media (max-width: 580px) {
@@ -397,128 +389,125 @@
         
         <!-- HERO SECTION -->
         <header>
-            <!-- REPO BANNER IMAGE INSERTED HERE -->
-            <img src="https://github.com/fabmenu/fabmenu.github.io/blob/main/Img/Banner.jpg?raw=true" alt="FabMenu Banner" class="hero-banner">
-
             <div class="logo">FabMenu</div>
             <p class="hero-description">
-                A lightweight, intuitive modification tool for Among Us, featuring a streamlined interface packed with a powerful suite of game modules[cite: 1]. Built with ease of use in mind, it provides seamless navigation and absolute control for private lobbies and custom testing[cite: 1].
+                A lightweight, intuitive modification tool for Among Us, featuring a streamlined interface packed with a powerful suite of game modules. Built with ease of use in mind, it provides seamless navigation and absolute control for private lobbies and custom testing.
             </p>
             
             <div class="hero-buttons">
                 <a href="#downloads" class="btn btn-primary">
-                    <i class="fa-solid fa-download"></i> Download Latest[cite: 1]
+                    <i class="fa-solid fa-download"></i> Download Latest
                 </a>
                 <a href="#changelog" class="btn btn-secondary">
-                    <i class="fa-solid fa-list-ul"></i> View Changelog[cite: 1]
+                    <i class="fa-solid fa-list-ul"></i> View Changelog
                 </a>
                 <a href="#guide" class="btn btn-secondary">
                     <i class="fa-solid fa-book"></i> Installation Guide
                 </a>
                 <a href="https://discord.gg/YOUR_INVITE_HERE" target="_blank" class="btn btn-discord">
-                    <i class="fa-brands fa-discord"></i> Join Discord[cite: 1]
+                    <i class="fa-brands fa-discord"></i> Join Discord
                 </a>
             </div>
         </header>
 
         <!-- DOWNLOADS SECTION -->
         <section id="downloads" class="panel">
-            <h2 class="panel-title"><i class="fa-solid fa-circle-down"></i> Select Your Platform[cite: 1]</h2>
+            <h2 class="panel-title"><i class="fa-solid fa-circle-down"></i> Select Your Platform</h2>
             
             <div class="download-grid">
                 <!-- Option 1: Steam & Itch -->
                 <div class="download-card">
                     <i class="fa-brands fa-steam platform-icon icon-steam-itch"></i>
-                    <h3>Steam / Itch.io[cite: 1]</h3>
-                    <p>Pre-configured package optimized for the Steam and Itch release of the game[cite: 1].</p>
-                    <a href="#" class="btn btn-primary btn-download-sm">Download .ZIP <i class="fa-solid fa-arrow-right"></i>[cite: 1]</a>
+                    <h3>Steam / Itch.io</h3>
+                    <p>Pre-configured package optimized for the Steam and Itch release of the game.</p>
+                    <a href="#" class="btn btn-primary btn-download-sm">Download .ZIP <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Option 2: MS Epic Xbox -->
                 <div class="download-card">
                     <i class="fa-solid fa-gamepad platform-icon icon-epic-ms"></i>
-                    <h3>MS / Epic / Xbox[cite: 1]</h3>
-                    <p>Pre-configured package optimized for the Epic Games, MS Store, and Xboxapps release[cite: 1].</p>
-                    <a href="#" class="btn btn-primary btn-download-sm">Download .ZIP <i class="fa-solid fa-arrow-right"></i>[cite: 1]</a>
+                    <h3>MS / Epic / Xbox</h3>
+                    <p>Pre-configured package optimized for the Epic Games, MS Store, and Xboxapps release.</p>
+                    <a href="#" class="btn btn-primary btn-download-sm">Download .ZIP <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Option 3: Standalone DLL -->
                 <div class="download-card">
                     <i class="fa-solid fa-file-code platform-icon icon-dll"></i>
-                    <h3>FabMenu.dll[cite: 1]</h3>
-                    <p>This is the standalone FabMenu.dll which you can inject manually using your own BepinEx setup[cite: 1].</p>
-                    <a href="#" class="btn btn-primary btn-download-sm">Download .DLL <i class="fa-solid fa-arrow-right"></i>[cite: 1]</a>
+                    <h3>FabMenu.dll</h3>
+                    <p>This is the standalone FabMenu.dll which you can inject manually using your own BepinEx setup.</p>
+                    <a href="#" class="btn btn-primary btn-download-sm">Download .DLL <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
             <!-- Discord Password Alert Box -->
             <div class="alert-box">
                 <i class="fa-solid fa-circle-exclamation"></i>
-                <p><span>Note:</span> The downloaded .ZIP packages are password-protected to prevent file corruption[cite: 1]. You can find the required archive password instantly inside our Discord server in the <code>#FabMenu</code> text channel[cite: 1].</p>
+                <p><span>Note:</span> The downloaded .ZIP packages are password-protected to prevent file corruption. You can find the required archive password instantly inside our Discord server in the <code>#FabMenu</code> text channel.</p>
             </div>
             
             <a href="https://discord.gg/YOUR_INVITE_HERE" target="_blank" class="btn btn-discord" style="margin-top: 20px; padding: 14px; font-size: 1rem; width: 100%;">
-                <i class="fa-brands fa-discord"></i> Connect to Discord Server[cite: 1]
+                <i class="fa-brands fa-discord"></i> Connect to Discord Server
             </a>
         </section>
 
         <!-- CHANGELOG SECTION -->
         <section id="changelog" class="panel">
-            <h2 class="panel-title"><i class="fa-solid fa-code-branch"></i> Changelog v1.4.1[cite: 1]</h2>
+            <h2 class="panel-title"><i class="fa-solid fa-code-branch"></i> Changelog v1.4.1</h2>
             
             <div class="changelog-section">
-                <span class="badge badge-added"># Added[cite: 1]</span>
+                <span class="badge badge-added"># Added</span>
                 <ul class="changelog-list">
-                    <li><strong>Assign Role Menu:</strong> A dedicated menu allowing you to select and assign any role to any player[cite: 1].</li>
-                    <li><strong>Brand New UI:</strong> A completely redesigned, modernized menu interface framework[cite: 1].</li>
-                    <li><strong>Lobby Info Enhancements:</strong> Added live player counts and Kill Cooldown (CD) tracking directly inside the Lobby Info panel[cite: 1].</li>
+                    <li><strong>Assign Role Menu:</strong> A dedicated menu allowing you to select and assign any role to any player.</li>
+                    <li><strong>Brand New UI:</strong> A completely redesigned, modernized menu interface framework.</li>
+                    <li><strong>Lobby Info Enhancements:</strong> Added live player counts and Kill Cooldown (CD) tracking directly inside the Lobby Info panel.</li>
                 </ul>
             </div>
 
             <div class="changelog-section">
-                <span class="badge badge-fixed"># Fixed[cite: 1]</span>
+                <span class="badge badge-fixed"># Fixed</span>
                 <ul class="changelog-list">
-                    <li><strong>See Roles:</strong> Fixed an issue where the Impostor's name would remain red even after disabling the feature[cite: 1].</li>
-                    <li><strong>Sabotage:</strong> Fixed an issue where sabotage toggles could not be turned off[cite: 1].</li>
-                    <li><strong>Force Roles:</strong> Fixed the broken and patched Force Roles features[cite: 1].</li>
-                    <li><strong>No Kill Cooldown:</strong> Fixed critical functionality issues with the No Kill Cooldown module[cite: 1].</li>
-                    <li><strong>Kill Other Impostors:</strong> Patched a bug where the Kill Other Impostors feature failed to work for certain users[cite: 1].</li>
+                    <li><strong>See Roles:</strong> Fixed an issue where the Impostor's name would remain red even after disabling the feature.</li>
+                    <li><strong>Sabotage:</strong> Fixed an issue where sabotage toggles could not be turned off.</li>
+                    <li><strong>Force Roles:</strong> Fixed the broken and patched Force Roles features.</li>
+                    <li><strong>No Kill Cooldown:</strong> Fixed critical functionality issues with the No Kill Cooldown module.</li>
+                    <li><strong>Kill Other Impostors:</strong> Patched a bug where the Kill Other Impostors feature failed to work for certain users.</li>
                 </ul>
             </div>
 
             <div class="changelog-section">
-                <span class="badge badge-refactored"># Refactored[cite: 1]</span>
+                <span class="badge badge-refactored"># Refactored</span>
                 <ul class="changelog-list">
-                    <li><strong>Zoom Control:</strong> Disabled the zoom-out function while scrolling inside the menu options UI to prevent accidental camera movement during setup[cite: 1].</li>
+                    <li><strong>Zoom Control:</strong> Disabled the zoom-out function while scrolling inside the menu options UI to prevent accidental camera movement during setup.</li>
                 </ul>
             </div>
         </section>
 
         <!-- INSTALLATION GUIDE SECTION -->
         <section id="guide" class="panel">
-            <h2 class="panel-title"><i class="fa-solid fa-book"></i> Installation Guide[cite: 1]</h2>
+            <h2 class="panel-title"><i class="fa-solid fa-book"></i> Installation Guide</h2>
             
-            <div class="guide-option-title">Option 1: Pre-Configured Installation (Recommended)[cite: 1]</div>
+            <div class="guide-option-title">Option 1: Pre-Configured Installation (Recommended)</div>
             <ol class="guide-list" style="counter-reset: step-counter;">
-                <li>Download the optimized .ZIP package for your specific game launcher platform (Steam/Itch or MS/Epic/Xbox)[cite: 1].</li>
-                <li>Extract the contents of the password-protected .ZIP file directly into your main Among Us game root installation directory[cite: 1].</li>
-                <li>Launch the game normally[cite: 1]. The mod menu will handle hook configurations and load automatically on startup[cite: 1].</li>
-                <li>Click the <code>Delete</code> key on your physical keyboard to toggle open the overlay menu interface[cite: 1].</li>
+                <li>Download the optimized .ZIP package for your specific game launcher platform (Steam/Itch or MS/Epic/Xbox).</li>
+                <li>Extract the contents of the password-protected .ZIP file directly into your main Among Us game root installation directory.</li>
+                <li>Launch the game normally. The mod menu will handle hook configurations and load automatically on startup.</li>
+                <li>Click the <code>Delete</code> key on your physical keyboard to toggle open the overlay menu interface.</li>
             </ol>
 
-            <div class="guide-option-title">Option 2: Standalone DLL Injection[cite: 1]</div>
+            <div class="guide-option-title">Option 2: Standalone DLL Injection</div>
             <ol class="guide-list" style="counter-reset: step-counter;">
-                <li>Download the standalone <code>FabMenu.dll</code> asset file[cite: 1].</li>
-                <li>Ensure you already have the standard BepInEx Injector toolkit correctly set up inside your local game files directory[cite: 1].</li>
-                <li>Place the <code>FabMenu.dll</code> file into your game's BepInEx plugins folder directory paths (<code>Among Us/BepInEx/plugins</code>)[cite: 1].</li>
-                <li>Launch the game through your launcher to let the runtime loader initialize the mod menu modules[cite: 1].</li>
-                <li>Click the <code>Delete</code> key on your physical keyboard to toggle open the overlay menu interface[cite: 1].</li>
+                <li>Download the standalone <code>FabMenu.dll</code> asset file.</li>
+                <li>Ensure you already have the standard BepInEx Injector toolkit correctly set up inside your local game files directory.</li>
+                <li>Place the <code>FabMenu.dll</code> file into your game's BepInEx plugins folder directory paths (<code>Among Us/BepInEx/plugins</code>).</li>
+                <li>Launch the game through your launcher to let the runtime loader initialize the mod menu modules.</li>
+                <li>Click the <code>Delete</code> key on your physical keyboard to toggle open the overlay menu interface.</li>
             </ol>
         </section>
 
         <!-- FOOTER SECTION -->
         <footer>
-            &copy; FabMenu. All rights reserved. Custom Built via GitHub Pages[cite: 1].
+            &copy; FabMenu. All rights reserved. Custom Built via GitHub Pages.
         </footer>
 
     </div>
