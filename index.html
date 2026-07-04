@@ -35,48 +35,47 @@
             color: var(--text-main);
             min-height: 100vh;
             line-height: 1.6;
-            padding: 40px 15px;
+            padding: 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            overflow-x: hidden; /* Prevents tiny accidental horizontal scroll glitches */
         }
 
+        /* Fixed the max-width to exactly mimic that compact, premium look on desktop */
         .container {
             width: 100%;
-            max-width: 650px;
+            max-width: 540px; 
         }
 
         /* --- HERO SECTION --- */
         header {
             text-align: center;
-            margin-bottom: 40px;
-            padding: 20px 0;
+            margin-bottom: 35px;
         }
 
         .logo {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 800;
             background: linear-gradient(45deg, #ff4757, #ff6b81, #ffa502);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -1px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .hero-description {
-            font-size: 1.05rem;
+            font-size: 0.98rem;
             color: var(--text-muted);
             text-align: center;
             font-weight: 400;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         /* --- HERO QUICK BUTTONS --- */
         .hero-buttons {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .btn {
@@ -84,49 +83,48 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 16px 24px;
+            padding: 14px 20px;
             border-radius: 12px;
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
             color: white;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
             border: none;
-            width: 100%;
         }
 
         .btn-primary {
             background: var(--btn-gradient);
             background-size: 200% auto;
-            box-shadow: 0 4px 20px rgba(0, 198, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 198, 255, 0.15);
         }
 
         .btn-primary:hover {
             background-position: right center;
             transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(255, 71, 87, 0.3);
+            box-shadow: 0 6px 24px rgba(255, 71, 87, 0.25);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--panel-border);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             transform: translateY(-2px);
         }
 
         .btn-discord {
             background: #5865F2;
-            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.2);
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.15);
         }
 
         .btn-discord:hover {
             background: #4752c4;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.3);
+            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.25);
         }
 
         /* --- PANELS & CARDS (Glassmorphism) --- */
@@ -134,33 +132,26 @@
             background: var(--panel-bg);
             border: 1px solid var(--panel-border);
             border-radius: 16px;
-            padding: 24px;
-            margin-top: 30px;
+            padding: 28px;
+            margin-top: 25px;
             backdrop-filter: blur(10px);
-            width: 100%;
         }
 
         .panel-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
             border-bottom: 1px solid var(--panel-border);
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
 
         /* --- DOWNLOAD OPTIONS SECTION --- */
-        #downloads {
-            scroll-margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
         .download-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.04);
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 15px;
@@ -168,17 +159,17 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            transition: border 0.3s ease;
-            width: 100%;
+            transition: border 0.3s ease, background 0.3s ease;
         }
 
         .download-card:hover {
-            border-color: rgba(0, 198, 255, 0.3);
+            border-color: rgba(0, 198, 255, 0.25);
+            background: rgba(255, 255, 255, 0.02);
         }
 
         .platform-icon {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
         }
         
         .icon-steam-itch { color: #00beef; }
@@ -186,46 +177,46 @@
         .icon-dll { color: #2ed573; }
 
         .download-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             margin-bottom: 6px;
             font-weight: 600;
         }
 
         .download-card p {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: var(--text-muted);
             margin-bottom: 16px;
         }
 
         .btn-download-sm {
             padding: 10px 20px;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             border-radius: 8px;
             width: 100%;
-            max-width: 200px;
+            max-width: 180px;
         }
 
         .alert-box {
-            background: rgba(255, 165, 2, 0.1);
-            border: 1px solid rgba(255, 165, 2, 0.3);
+            background: rgba(255, 165, 2, 0.08);
+            border: 1px solid rgba(255, 165, 2, 0.2);
             border-radius: 12px;
-            padding: 16px;
+            padding: 14px;
             margin-top: 15px;
             display: flex;
-            gap: 12px;
+            gap: 10px;
             align-items: flex-start;
-            width: 100%;
         }
 
         .alert-box i {
             color: #ffa502;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-top: 2px;
         }
 
         .alert-box p {
-            font-size: 0.9rem;
-            color: #f1f5f9;
+            font-size: 0.88rem;
+            color: #e2e8f0;
+            line-height: 1.5;
         }
         
         .alert-box span {
@@ -240,26 +231,26 @@
 
         .badge {
             display: inline-block;
-            padding: 4px 10px;
+            padding: 4px 8px;
             border-radius: 6px;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
 
-        .badge-added { background: rgba(46, 213, 115, 0.15); color: var(--accent-secondary); }
-        .badge-fixed { background: rgba(255, 71, 87, 0.15); color: var(--accent-primary); }
-        .badge-refactored { background: rgba(0, 198, 255, 0.15); color: #00c6ff; }
+        .badge-added { background: rgba(46, 213, 115, 0.12); color: var(--accent-secondary); }
+        .badge-fixed { background: rgba(255, 71, 87, 0.12); color: var(--accent-primary); }
+        .badge-refactored { background: rgba(0, 198, 255, 0.12); color: #00c6ff; }
 
         .changelog-list, .guide-list {
             list-style: none;
         }
 
         .changelog-list li {
-            font-size: 0.95rem;
-            margin-bottom: 10px;
+            font-size: 0.92rem;
+            margin-bottom: 8px;
             color: #d1d5db;
             padding-left: 15px;
             position: relative;
@@ -278,19 +269,19 @@
 
         /* --- INSTALLATION GUIDE --- */
         .guide-option-title {
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 600;
             margin: 15px 0 10px 0;
             color: #f3f4f6;
         }
 
         .guide-list li {
-            font-size: 0.95rem;
-            margin-bottom: 12px;
+            font-size: 0.92rem;
+            margin-bottom: 10px;
             color: #d1d5db;
             counter-increment: step-counter;
             display: block;
-            padding-left: 25px;
+            padding-left: 22px;
             position: relative;
         }
 
@@ -308,7 +299,7 @@
             padding: 2px 6px;
             border-radius: 4px;
             font-family: monospace;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: #ff7675;
             display: inline-block;
             vertical-align: middle;
@@ -318,20 +309,28 @@
         /* --- FOOTER --- */
         footer {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 45px;
             padding: 20px 0;
-            color: rgba(255, 255, 255, 0.2);
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
             width: 100%;
         }
 
-        /* --- MOBILE MEDIA QUERIES --- */
-        @media (max-width: 480px) {
-            .logo { font-size: 2.8rem; }
-            .panel { padding: 16px; }
-            .download-card { padding: 16px; }
-            .alert-box { padding: 12px; gap: 8px; }
+        /* --- PRECISE MOBILE OVERRIDES --- */
+        @media (max-width: 580px) {
+            body {
+                padding: 30px 12px;
+            }
+            .panel {
+                padding: 18px;
+            }
+            .download-card {
+                padding: 16px;
+            }
+            .logo {
+                font-size: 2.6rem;
+            }
         }
     </style>
 </head>
@@ -393,7 +392,7 @@
                 <p><span>Note:</span> The downloaded .ZIP packages are password-protected to prevent file corruption. You can find the required archive password instantly inside our Discord server in the <code>#FabMenu</code> text channel.</p>
             </div>
             
-            <a href="https://discord.gg/YOUR_INVITE_HERE" target="_blank" class="btn btn-discord" style="margin-top: 15px; padding: 12px;">
+            <a href="https://discord.gg/YOUR_INVITE_HERE" target="_blank" class="btn btn-discord" style="margin-top: 15px; padding: 12px; font-size: 0.95rem;">
                 <i class="fa-brands fa-discord"></i> Join Discord Server
             </a>
         </section>
