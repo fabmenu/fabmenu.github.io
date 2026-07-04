@@ -39,6 +39,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            scroll-behavior: smooth; /* Enables smooth scrolling when clicking the top menu buttons */
         }
 
         /* Maximized container width for the ultimate desktop viewing experience */
@@ -392,6 +393,10 @@
                 <a href="#changelog" class="btn btn-secondary">
                     <i class="fa-solid fa-list-ul"></i> View Changelog
                 </a>
+                <!-- NEW BUTTON ADDED HERE -->
+                <a href="#guide" class="btn btn-secondary">
+                    <i class="fa-solid fa-book"></i> Installation Guide
+                </a>
                 <a href="https://discord.gg/YOUR_INVITE_HERE" target="_blank" class="btn btn-discord">
                     <i class="fa-brands fa-discord"></i> Join Discord
                 </a>
@@ -471,8 +476,8 @@
             </div>
         </section>
 
-        <!-- INSTALLATION GUIDE SECTION -->
-        <section class="panel">
+        <!-- INSTALLATION GUIDE SECTION (Added id="guide" to target link) -->
+        <section id="guide" class="panel">
             <h2 class="panel-title"><i class="fa-solid fa-book"></i> Installation Guide</h2>
             
             <div class="guide-option-title">Option 1: Pre-Configured Installation (Recommended)</div>
