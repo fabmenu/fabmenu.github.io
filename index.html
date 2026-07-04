@@ -279,17 +279,21 @@
 
         .guide-list li {
             font-size: 0.95rem;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             color: #d1d5db;
             counter-increment: step-counter;
-            display: flex;
-            gap: 10px;
+            display: block;
+            padding-left: 25px;
+            position: relative;
         }
 
         .guide-list li::before {
             content: counter(step-counter) ".";
             color: var(--accent-primary);
             font-weight: 600;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
 
         code {
@@ -299,6 +303,9 @@
             font-family: monospace;
             font-size: 0.9rem;
             color: #ff7675;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap;
         }
 
         /* --- FOOTER --- */
@@ -331,14 +338,12 @@
             </p>
             
             <div class="hero-buttons">
-                <!-- Anchor tag links down to #downloads section on the same page -->
                 <a href="#downloads" class="btn btn-primary">
                     <i class="fa-solid fa-download"></i> Download
                 </a>
                 <a href="#changelog" class="btn btn-secondary">
                     <i class="fa-solid fa-list-ul"></i> Learn more
                 </a>
-                <!-- Update with your actual discord server link -->
                 <a href="https://discord.gg/YOUR_INVITE_HERE" target="_blank" class="btn btn-discord">
                     <i class="fa-brands fa-discord"></i> Discord
                 </a>
@@ -354,7 +359,6 @@
                 <i class="fa-brands fa-steam platform-icon icon-steam-itch"></i>
                 <h3>Steam / Itch.io</h3>
                 <p>Pre-configured package optimized for the Steam and Itch release of the game.</p>
-                <!-- Replace '#' with your real download file URLs -->
                 <a href="#" class="btn btn-primary btn-download-sm">Download .ZIP <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
@@ -363,7 +367,6 @@
                 <i class="fa-solid fa-gamepad platform-icon icon-epic-ms"></i>
                 <h3>MS / Epic / Xbox</h3>
                 <p>Pre-configured package optimized for the Epic Games, MS Store, and Xboxapps release.</p>
-                <!-- Replace '#' with your real download file URLs -->
                 <a href="#" class="btn btn-primary btn-download-sm">Download .ZIP <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
@@ -372,7 +375,6 @@
                 <i class="fa-solid fa-file-code platform-icon icon-dll"></i>
                 <h3>FabMenu.dll</h3>
                 <p>This is the standalone FabMenu.dll which you can inject manually using a BepinEx Injector.</p>
-                <!-- Replace '#' with your real download file URLs -->
                 <a href="#" class="btn btn-primary btn-download-sm">Download .DLL <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
@@ -382,8 +384,7 @@
                 <p><span>Note:</span> The downloaded .ZIP packages are password-protected to prevent file corruption. You can find the required archive password instantly inside our Discord server in the <code>#FabMenu</code> text channel.</p>
             </div>
             
-            <!-- Direct Discord Link inside downloads panel -->
-            <a href="https://discord.gg/rJz747UQhG" target="_blank" class="btn btn-discord" style="margin-top: 15px; padding: 12px;">
+            <a href="https://discord.gg/YOUR_INVITE_HERE" target="_blank" class="btn btn-discord" style="margin-top: 15px; padding: 12px;">
                 <i class="fa-brands fa-discord"></i> Join Discord Server
             </a>
         </section>
@@ -451,3 +452,4 @@
 
 </body>
 </html>
+
