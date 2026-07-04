@@ -1,1 +1,453 @@
-<h1>FabMenu Official Site Coming Soon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabMenu — Official Home</title>
+    <!-- Google Fonts for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for beautiful, sharp icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0b0914 0%, #16122c 50%, #090710 100%);
+            --panel-bg: rgba(255, 255, 255, 0.03);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-primary: #ff4757;
+            --accent-secondary: #2ed573;
+            --btn-gradient: linear-gradient(90deg, #00c6ff 0%, #0072ff 50%, #ff4757 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+        }
+
+        /* --- HERO SECTION --- */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #ff4757, #ff6b81, #ffa502);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        /* --- HERO QUICK BUTTONS --- */
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--btn-gradient);
+            background-size: 200% auto;
+            box-shadow: 0 4px 20px rgba(0, 198, 255, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(255, 71, 87, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--panel-border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-discord {
+            background: #5865F2;
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.2);
+        }
+
+        .btn-discord:hover {
+            background: #4752c4;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.3);
+        }
+
+        /* --- PANELS & CARDS (Glassmorphism) --- */
+        .panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .panel-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 10px;
+        }
+
+        /* --- DOWNLOAD OPTIONS SECTION --- */
+        #downloads {
+            scroll-margin-top: 20px;
+        }
+
+        .download-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: border 0.3s ease;
+        }
+
+        .download-card:hover {
+            border-color: rgba(0, 198, 255, 0.3);
+        }
+
+        .platform-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        
+        .icon-steam-itch { color: #00beef; }
+        .icon-epic-ms { color: #ffffff; }
+        .icon-dll { color: #2ed573; }
+
+        .download-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .download-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .btn-download-sm {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .alert-box {
+            background: rgba(255, 165, 2, 0.1);
+            border: 1px solid rgba(255, 165, 2, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 15px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .alert-box i {
+            color: #ffa502;
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        .alert-box p {
+            font-size: 0.9rem;
+            color: #f1f5f9;
+        }
+        
+        .alert-box span {
+            color: #ffa502;
+            font-weight: 600;
+        }
+
+        /* --- CHANGELOG TAGS & LISTS --- */
+        .changelog-section {
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-added { background: rgba(46, 213, 115, 0.15); color: var(--accent-secondary); }
+        .badge-fixed { background: rgba(255, 71, 87, 0.15); color: var(--accent-primary); }
+        .badge-refactored { background: rgba(0, 198, 255, 0.15); color: #00c6ff; }
+
+        .changelog-list, .guide-list {
+            list-style: none;
+        }
+
+        .changelog-list li {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: #d1d5db;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .changelog-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--text-muted);
+        }
+
+        .changelog-list strong {
+            color: var(--text-main);
+        }
+
+        /* --- INSTALLATION GUIDE --- */
+        .guide-option-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 15px 0 10px 0;
+            color: #f3f4f6;
+        }
+
+        .guide-list li {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            color: #d1d5db;
+            counter-increment: step-counter;
+            display: flex;
+            gap: 10px;
+        }
+
+        .guide-list li::before {
+            content: counter(step-counter) ".";
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        code {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #ff7675;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            width: 100%;
+        }
+
+        /* Responsive scaling */
+        @media (max-width: 480px) {
+            .logo { font-size: 2.8rem; }
+            .panel { padding: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HERO SECTION -->
+        <header>
+            <div class="logo">FabMenu</div>
+            <p class="hero-description">
+                A lightweight, intuitive modification tool for Among Us, featuring a streamlined interface packed with a powerful suite of game modules. Built with ease of use in mind, it provides seamless navigation and absolute control for private lobbies and custom testing.
+            </p>
+            
+            <div class="hero-buttons">
+                <!-- Anchor tag links down to #downloads section on the same page -->
+                <a href="#downloads" class="btn btn-primary">
+                    <i class="fa-solid fa-download"></i> Download
+                </a>
+                <a href="#changelog" class="btn btn-secondary">
+                    <i class="fa-solid fa-list-ul"></i> Learn more
+                </a>
+                <!-- Update with your actual discord server link -->
+                <a href="https://discord.gg/YOUR_INVITE_HERE" target="_blank" class="btn btn-discord">
+                    <i class="fa-brands fa-discord"></i> Discord
+                </a>
+            </div>
+        </header>
+
+        <!-- DOWNLOADS SECTION -->
+        <section id="downloads" class="panel">
+            <h2 class="panel-title"><i class="fa-solid fa-circle-down"></i> Select Your Platform</h2>
+            
+            <!-- Option 1: Steam & Itch -->
+            <div class="download-card">
+                <i class="fa-brands fa-steam platform-icon icon-steam-itch"></i>
+                <h3>Steam / Itch.io</h3>
+                <p>Pre-configured package optimized for the Steam and Itch release of the game.</p>
+                <!-- Replace '#' with your real download file URLs -->
+                <a href="#" class="btn btn-primary btn-download-sm">Download .ZIP <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Option 2: MS Epic Xbox -->
+            <div class="download-card">
+                <i class="fa-solid fa-gamepad platform-icon icon-epic-ms"></i>
+                <h3>MS / Epic / Xbox</h3>
+                <p>Pre-configured package optimized for the Epic Games, MS Store, and Xboxapps release.</p>
+                <!-- Replace '#' with your real download file URLs -->
+                <a href="#" class="btn btn-primary btn-download-sm">Download .ZIP <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Option 3: Standalone DLL -->
+            <div class="download-card">
+                <i class="fa-solid fa-file-code platform-icon icon-dll"></i>
+                <h3>FabMenu.dll</h3>
+                <p>This is the standalone FabMenu.dll which you can inject manually using a BepinEx Injector.</p>
+                <!-- Replace '#' with your real download file URLs -->
+                <a href="#" class="btn btn-primary btn-download-sm">Download .DLL <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Discord Password Alert Box -->
+            <div class="alert-box">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p><span>Note:</span> The downloaded .ZIP packages are password-protected to prevent file corruption. You can find the required archive password instantly inside our Discord server in the <code>#FabMenu</code> text channel.</p>
+            </div>
+            
+            <!-- Direct Discord Link inside downloads panel -->
+            <a href="https://discord.gg/rJz747UQhG" target="_blank" class="btn btn-discord" style="margin-top: 15px; padding: 12px;">
+                <i class="fa-brands fa-discord"></i> Join Discord Server
+            </a>
+        </section>
+
+        <!-- CHANGELOG SECTION -->
+        <section id="changelog" class="panel">
+            <h2 class="panel-title"><i class="fa-solid fa-code-branch"></i> Changelog v1.4.1</h2>
+            
+            <div class="changelog-section">
+                <span class="badge badge-added"># Added</span>
+                <ul class="changelog-list">
+                    <li><strong>Assign Role Menu:</strong> A dedicated menu allowing you to select and assign any role to any player.</li>
+                    <li><strong>Brand New UI:</strong> A completely redesigned, modernized menu interface framework.</li>
+                    <li><strong>Lobby Info Enhancements:</strong> Added live player counts and Kill Cooldown (CD) tracking directly inside the Lobby Info panel.</li>
+                </ul>
+            </div>
+
+            <div class="changelog-section">
+                <span class="badge badge-fixed"># Fixed</span>
+                <ul class="changelog-list">
+                    <li><strong>See Roles:</strong> Fixed an issue where the Impostor's name would remain red even after disabling the feature.</li>
+                    <li><strong>Sabotage:</strong> Fixed an issue where sabotage toggles could not be turned off.</li>
+                    <li><strong>Force Roles:</strong> Fixed the broken and patched Force Roles features.</li>
+                    <li><strong>No Kill Cooldown:</strong> Fixed critical functionality issues with the No Kill Cooldown module.</li>
+                    <li><strong>Kill Other Impostors:</strong> Patched a bug where the Kill Other Impostors feature failed to work for certain users.</li>
+                </ul>
+            </div>
+
+            <div class="changelog-section">
+                <span class="badge badge-refactored"># Refactored</span>
+                <ul class="changelog-list">
+                    <li><strong>Zoom Control:</strong> Disabled the zoom-out function while scrolling inside the menu options UI to prevent accidental camera movement during setup.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- INSTALLATION GUIDE SECTION -->
+        <section class="panel">
+            <h2 class="panel-title"><i class="fa-solid fa-book"></i> Installation Guide</h2>
+            
+            <div class="guide-option-title">Option 1: Pre-Configured Installation (Recommended)</div>
+            <ol class="guide-list" style="counter-reset: step-counter;">
+                <li>Download the optimized .ZIP package for your specific game launcher platform (Steam/Itch or MS/Epic/Xbox).</li>
+                <li>Extract the contents of the password-protected .ZIP file directly into your main Among Us game root installation directory.</li>
+                <li>Launch the game normally. The mod menu will handle hook configurations and load automatically on startup.</li>
+                <li>Click the <code>Delete</code> key on your physical keyboard to toggle open the overlay menu interface.</li>
+            </ol>
+
+            <div class="guide-option-title" style="margin-top: 25px;">Option 2: Standalone DLL Injection</div>
+            <ol class="guide-list" style="counter-reset: step-counter;">
+                <li>Download the standalone <code>FabMenu.dll</code> asset file.</li>
+                <li>Ensure you already have the standard BepInEx Injector toolkit correctly set up inside your local game files directory.</li>
+                <li>Place the <code>FabMenu.dll</code> file into your game's BepInEx plugins folder directory paths (<code>Among Us/BepInEx/plugins</code>).</li>
+                <li>Launch the game through your launcher to let the runtime loader initialize the mod menu modules.</li>
+                <li>Click the <code>Delete</code> key on your physical keyboard to toggle open the overlay menu interface.</li>
+            </ol>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <footer>
+            &copy; FabMenu. All rights reserved. Custom Built via GitHub Pages.
+        </footer>
+
+    </div>
+
+</body>
+</html>
