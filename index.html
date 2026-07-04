@@ -41,35 +41,35 @@
             align-items: center;
         }
 
-        /* Expanded container max-width to look expansive and solid on PC */
+        /* Maximized container width for the ultimate desktop viewing experience */
         .container {
             width: 100%;
-            max-width: 840px; 
+            max-width: 1100px; 
         }
 
         /* --- HERO SECTION --- */
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         .logo {
-            font-size: 3.8rem;
+            font-size: 4rem;
             font-weight: 800;
             background: linear-gradient(45deg, #ff4757, #ff6b81, #ffa502);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -1px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .hero-description {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
             text-align: center;
             font-weight: 400;
-            margin-bottom: 30px;
-            max-width: 760px;
+            margin-bottom: 35px;
+            max-width: 850px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -88,7 +88,7 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 14px 28px;
+            padding: 14px 32px;
             border-radius: 12px;
             font-size: 1rem;
             font-weight: 600;
@@ -137,40 +137,35 @@
             background: var(--panel-bg);
             border: 1px solid var(--panel-border);
             border-radius: 16px;
-            padding: 35px;
-            margin-top: 30px;
+            padding: 40px;
+            margin-top: 35px;
             backdrop-filter: blur(10px);
         }
 
         .panel-title {
-            font-size: 1.45rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 25px;
             display: flex;
             align-items: center;
             gap: 10px;
             border-bottom: 1px solid var(--panel-border);
-            padding-bottom: 14px;
+            padding-bottom: 15px;
         }
 
-        /* --- CSS GRID FOR DOWNLOAD CARDS --- */
+        /* --- 3-COLUMN CSS GRID FOR DESKTOP --- */
         .download-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-bottom: 20px;
-        }
-
-        /* Forces the 3rd card (standalone DLL) to span completely across both columns on desktop */
-        .download-card.full-width {
-            grid-column: span 2;
         }
 
         .download-card {
             background: rgba(255, 255, 255, 0.01);
             border: 1px solid rgba(255, 255, 255, 0.04);
             border-radius: 12px;
-            padding: 26px;
+            padding: 28px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -185,7 +180,7 @@
         }
 
         .platform-icon {
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             margin-bottom: 14px;
         }
         
@@ -195,15 +190,15 @@
 
         .download-card h3 {
             font-size: 1.25rem;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
         .download-card p {
             font-size: 0.92rem;
             color: var(--text-muted);
-            margin-bottom: 20px;
-            max-width: 320px;
+            margin-bottom: 24px;
+            line-height: 1.5;
         }
 
         .btn-download-sm {
@@ -211,8 +206,8 @@
             font-size: 0.9rem;
             border-radius: 8px;
             width: 100%;
-            max-width: 200px;
-            margin-top: auto; /* Pushes button cleanly to bottom */
+            max-width: 180px;
+            margin-top: auto; /* Standardizes buttons to line up horizontally */
         }
 
         .alert-box {
@@ -220,7 +215,7 @@
             border: 1px solid rgba(255, 165, 2, 0.15);
             border-radius: 12px;
             padding: 18px;
-            margin-top: 20px;
+            margin-top: 25px;
             display: flex;
             gap: 14px;
             align-items: flex-start;
@@ -330,7 +325,7 @@
         /* --- FOOTER --- */
         footer {
             text-align: center;
-            margin-top: 55px;
+            margin-top: 60px;
             padding: 25px 0;
             color: rgba(255, 255, 255, 0.15);
             font-size: 0.85rem;
@@ -338,12 +333,23 @@
             width: 100%;
         }
 
-        /* --- RESPONSIVE MOBILE DOWN-SCALING --- */
+        /* --- TABLET LAYOUT RESPONSIVENESS --- */
+        @media (max-width: 992px) {
+            .download-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 Columns for standard tablets */
+            }
+            /* Standalone card spans full width only when wrapped onto a new row on tablets */
+            .download-card:last-child {
+                grid-column: span 2;
+            }
+        }
+
+        /* --- MOBILE LAYOUT RESPONSIVENESS --- */
         @media (max-width: 768px) {
             .download-grid {
-                grid-template-columns: 1fr; /* Switch grid to single column on tablet/mobile */
+                grid-template-columns: 1fr; /* Crisp single-stack column on phones */
             }
-            .download-card.full-width {
+            .download-card:last-child {
                 grid-column: span 1;
             }
             .hero-buttons {
@@ -360,13 +366,10 @@
                 padding: 30px 14px;
             }
             .panel {
-                padding: 22px;
-            }
-            .download-card {
-                padding: 20px;
+                padding: 24px;
             }
             .logo {
-                font-size: 3rem;
+                font-size: 3.2rem;
             }
         }
     </style>
@@ -417,9 +420,9 @@
                 </div>
 
                 <!-- Option 3: Standalone DLL -->
-                <div class="download-card full-width">
+                <div class="download-card">
                     <i class="fa-solid fa-file-code platform-icon icon-dll"></i>
-                    <h3>FabMenu.dll (Standalone)</h3>
+                    <h3>FabMenu.dll</h3>
                     <p>This is the standalone FabMenu.dll which you can inject manually using your own BepinEx setup.</p>
                     <a href="#" class="btn btn-primary btn-download-sm">Download .DLL <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
